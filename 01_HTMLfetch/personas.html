@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Personas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gestión de Personas</h1>
+            <button id="btnLogout">Cerrar Sesión</button>
+        </div>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre, apellido, CI, email, teléfono...">
+                <button id="btnClearSearch">Limpiar</button>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="btnNuevo">Nueva Persona</button>
+        </div>
+
+        <div id="tablaPersonas"></div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="tituloModal">Nueva Persona</h2>
+                <form id="formPersona">
+                    <input type="hidden" id="personaId">
+                    <div class="form-group">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" id="nombres" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ci">CI:</label>
+                        <input type="text" id="ci" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="personas.js"></script>
+</body>
+</html>
